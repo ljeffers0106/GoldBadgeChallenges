@@ -1,0 +1,10 @@
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\bin\Debug\01_CafeUI.exe.config
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\bin\Debug\01_CafeUI.exe
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\bin\Debug\01_CafeUI.pdb
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\obj\Debug\01_CafeUI.csprojAssemblyReference.cache
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\obj\Debug\01_CafeUI.csproj.CoreCompileInputs.cache
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\obj\Debug\01_CafeUI.exe
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\obj\Debug\01_CafeUI.pdb
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\bin\Debug\01_CafeRepository.dll
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\bin\Debug\01_CafeRepository.pdb
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\01_CafeUI\obj\Debug\01_CafeUI.csproj.CopyComplete
