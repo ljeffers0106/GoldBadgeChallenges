@@ -8,16 +8,16 @@ namespace _02_Claims
 {
     public enum ClaimType
     {
-        Car = 1,
-        Home,
+        Car   = 1,
+        Home ,
         Theft
     }
     public class Claim
     {
-
         public int ClaimId { get; set; }
         public ClaimType ClaimType { get; set; }
         public string ClaimDescription { get; set; }
+        public double ClaimAmount { get; set; }
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
 
@@ -38,16 +38,14 @@ namespace _02_Claims
         }   
         public Claim() { }
 
-        public Claim(int claimId, ClaimType claimType, string claimDescription, DateTime dateOfIncident, DateTime dateOfClaim)
-            {
+        public Claim(int claimId, ClaimType claimType, string claimDescription, double claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
+        {
                 ClaimId = claimId;
                 ClaimType = claimType;
                 ClaimDescription = claimDescription;
+                ClaimAmount = claimAmount; 
                 DateOfIncident = dateOfIncident;
                 DateOfClaim = dateOfClaim;
-            }
-
-        
-
+        }
     }
 }

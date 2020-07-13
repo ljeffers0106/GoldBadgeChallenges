@@ -10,7 +10,7 @@ namespace _02_ClaimsUI
     {
         static void Main(string[] args)
         {
-            ProgramUI ui = new ProgramUI(); // this line instantiates our ProgramUI; in doing so we have instantiated our _field that is of Type CafeRepository
+            ProgramUI ui = new ProgramUI(); // this line instantiates our ProgramUI; in doing so we have instantiated our _field that is of Type ClaimsRepository
             ui.Run();
         }
     }

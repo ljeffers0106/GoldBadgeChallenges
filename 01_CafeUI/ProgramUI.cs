@@ -71,7 +71,6 @@ namespace _01_CafeUI
                 int result = Int32.Parse(itemNumber);
                 Console.WriteLine(result);
                 content.MealNumber = result;
-
             }
             catch (FormatException)
             {
