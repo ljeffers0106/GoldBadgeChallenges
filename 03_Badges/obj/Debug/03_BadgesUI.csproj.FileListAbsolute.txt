@@ -1,0 +1,10 @@
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\bin\Debug\03_Badges.exe.config
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\bin\Debug\03_Badges.exe
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\bin\Debug\03_Badges.pdb
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\bin\Debug\03_BadgesClass.dll
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\bin\Debug\03_BadgesClass.pdb
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\obj\Debug\03_BadgesUI.csprojAssemblyReference.cache
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\obj\Debug\03_BadgesUI.csproj.CoreCompileInputs.cache
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\obj\Debug\03_BadgesUI.csproj.CopyComplete
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\obj\Debug\03_Badges.exe
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\03_Badges\obj\Debug\03_Badges.pdb

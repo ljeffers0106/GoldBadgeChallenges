@@ -13,7 +13,6 @@ namespace _03_Badges
         //Define dictionary
         public Dictionary<int, string> _badgeLookup = new Dictionary<int, string>()
         {
-
         };
         // add a new badge and room list
         public bool AddBadge(int badgeNumber, string roomString)
@@ -37,6 +36,16 @@ namespace _03_Badges
             string roomStringValue;
             _badgeLookup.TryGetValue(numberOfBadge, out roomStringValue);
             return roomStringValue;
+        }
+        public int GetBadgeCount()
+        {
+            int badgeCount = _badgeLookup.Count;
+            return badgeCount;
+        }
+        public int GetBadge(int index)
+        {
+            int actualBadge = _badgeLookup.ElementAt(index).Key;
+            return actualBadge;
         }
     }
 }

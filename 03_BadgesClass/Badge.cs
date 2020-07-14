@@ -20,4 +20,14 @@ namespace _03_Badges
             RoomList = roomList;
         }
     }
+    public class DoorList
+    {
+        public string DoorCode { get; set; }
+
+        public DoorList() { }
+        public DoorList(string doorCode)
+        {
+            DoorCode = doorCode;
+        }
+    }
 }
