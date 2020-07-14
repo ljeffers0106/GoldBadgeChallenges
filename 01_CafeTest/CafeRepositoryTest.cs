@@ -43,7 +43,8 @@ namespace _01_CafeTest
             //Act
             List<MenuItem> contents = repo.GetContents();
             bool directoryHasContent = contents.Contains(content);
-            //Assert.IsTrue(directoryHasContent);
+            //Assert
+            Assert.IsTrue(directoryHasContent);
         }
 
         [TestMethod]
