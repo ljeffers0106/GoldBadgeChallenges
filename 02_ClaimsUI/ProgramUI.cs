@@ -12,8 +12,7 @@ namespace _02_ClaimsUI
     class ProgramUI
     {
         ClaimsRepository _repo = new ClaimsRepository(); //just like when our ProgramUI is instantiated, One field inside our _repo are instantiated, and not disposed of until this ProgramUI class is disposed once our ConsoleApp stops running
-        Queue<int> idNumber = new Queue<int>(); //Queue defined here because I could not get it to work any other way
-        
+        Queue<int> idNumber = new Queue<int>(); 
         public void Run()
         {
             RunMenu();
