@@ -55,6 +55,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\03_BadgesClass\03_Badges.csproj">
+      <Project>{45493021-CE36-4670-9793-54FFC5B7580F}</Project>
+      <Name>03_Badges</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\03_Badges\03_BadgesUI.csproj">
+      <Project>{605da140-f2f8-40ff-a307-debdb6c571fa}</Project>
+      <Name>03_BadgesUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

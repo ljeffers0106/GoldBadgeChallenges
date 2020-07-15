@@ -8,3 +8,5 @@ C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\02_ClaimsUI\obj\Debug\02_
 C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\02_ClaimsUI\obj\Debug\02_ClaimsUI.csproj.CopyComplete
 C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\02_ClaimsUI\obj\Debug\02_ClaimsUI.exe
 C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\02_ClaimsUI\obj\Debug\02_ClaimsUI.pdb
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\02_ClaimsUI\bin\Debug\03_BadgesClass.dll
+C:\Users\Lisa Jeffers\source\repos\GoldBadgeChallenges\02_ClaimsUI\bin\Debug\03_BadgesClass.pdb

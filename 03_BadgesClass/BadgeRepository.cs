@@ -8,8 +8,6 @@ namespace _03_Badges
 {
     public class BadgeRepository
     {
-        // protected - can only access ?
-        protected readonly List<DoorList> _doors = new List<DoorList>();
         //Define dictionary
         public Dictionary<int, string> _badgeLookup = new Dictionary<int, string>()
         {
@@ -19,7 +17,7 @@ namespace _03_Badges
         {
             int startingCount = _badgeLookup.Count;
             _badgeLookup.Add(badgeNumber, roomString);
-            bool wasAdded = (_badgeLookup.Count > startingCount) ? true : false;
+            bool wasAdded = (_badgeLookup.Count > startingCount);
             return wasAdded;
         }
         // remove a badge from the dictionary
@@ -30,7 +28,7 @@ namespace _03_Badges
             bool wasRemoved = (_badgeLookup.Count > startingCount) ? true : false;
             return wasRemoved;
         }
-        // get badge rooms
+        // get badge doors aka rooms
         public string GetBadgeRooms(int numberOfBadge)
         {
             string roomStringValue;
