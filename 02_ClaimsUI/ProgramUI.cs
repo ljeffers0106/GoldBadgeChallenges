@@ -12,7 +12,6 @@ namespace _02_ClaimsUI
     class ProgramUI
     {
         ClaimsRepository _repo = new ClaimsRepository(); //just like when our ProgramUI is instantiated, One field inside our _repo are instantiated, and not disposed of until this ProgramUI class is disposed once our ConsoleApp stops running
-        Queue<int> idNumber = new Queue<int>(); 
         public void Run()
         {
             RunMenu();
@@ -67,7 +66,11 @@ namespace _02_ClaimsUI
              "DateOfAccident     " +
              "DateOfClaim        " +
              "IsValid     ");
-            ReadQueueDisplay();
+            Queue<Claim> localClaimQueue = _repo.GetContents();
+            foreach(Claim i in localClaimQueue)
+            {
+                DisplayContent(i);
+            }
             Console.WriteLine("              ");  // blank line between
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
@@ -85,8 +88,8 @@ namespace _02_ClaimsUI
         private void NextClaimIn()
         {
             Console.Clear();
-            int nextToGo = idNumber.Peek();
-            Claim content = _repo.GetContentByClaimId(nextToGo);
+            Queue<Claim> localClaimQueue = _repo.GetContents();
+            Claim content = localClaimQueue.Peek();
             Console.WriteLine($"ClaimID: {content.ClaimId} \n" +
                 $"Type: {content.ClaimType} \n" +
                 $"Description: {content.ClaimDescription} \n" +
@@ -95,10 +98,10 @@ namespace _02_ClaimsUI
                 $"DateOfClaim: {content.DateOfClaim.Date:d} \n" +
                 $"IsValid {content.IsValid} \n");
             Console.WriteLine("Do you want to deal with this claim now(y/n)?");
-            string removeId = Console.ReadLine();
+            string removeId = Console.ReadLine().ToLower();
             if (removeId == "y")
             {
-                RemoveClaimQueue();
+                _repo.RemoveClaimQueue();
             }
         }
         private void EnterNewClaim()
@@ -166,29 +169,7 @@ namespace _02_ClaimsUI
                 Console.ReadKey();
             }
             // call repository add claim method
-            _repo.AddClaim(content);
-            AddClaimQueue(content.ClaimId);
-        }
-        //Queue methods
-        public void AddClaimQueue(int identifyNumber)
-        {
-            idNumber.Enqueue(identifyNumber);
-        }
-        public void RemoveClaimQueue()
-        {
-            idNumber.Dequeue();
-        }
-        public void PeekClaimQueue()
-        {
-            idNumber.Peek();
-        }
-        public void ReadQueueDisplay()
-        {
-            foreach (int number in idNumber)
-            {
-                Claim information = _repo.GetContentByClaimId(number);
-                DisplayContent(information);
-            }
+            _repo.AddClaimQueue(content);
         }
     }
 }

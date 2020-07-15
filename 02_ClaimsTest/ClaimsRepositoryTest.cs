@@ -9,20 +9,6 @@ namespace _02_ClaimsTest
     [TestClass]
     public class ClaimsRepositoryTest
     {
-        [TestMethod]
-        public void AddClaim_ShouldGetCorrectBoolean()
-        {
-            //Arrange 
-            Claim content = new Claim();
-            ClaimsRepository _repo = new ClaimsRepository();
-
-            //Act
-            bool addResult = _repo.AddClaim(content);
-
-            // Assert
-            Assert.IsTrue(addResult);
-        }
-
         private ClaimsRepository _repo;
         private Claim _content;
         [TestInitialize]
@@ -31,10 +17,22 @@ namespace _02_ClaimsTest
             DateTime inDateTime = new DateTime(2020, 07, 10);
             DateTime claimDateTime = new DateTime(2020, 07, 15);
             _repo = new ClaimsRepository();
-            _content = new Claim(1, ClaimType.Car, "Fender Bender", 500.00, inDateTime, claimDateTime);
+            _content = new Claim(10, ClaimType.Car, "Fender Bender", 500.00, inDateTime, claimDateTime);
+            _repo.AddClaim(_content);
+            _content = new Claim(20, ClaimType.Car, "Accident", 1500.00, inDateTime, claimDateTime);
             _repo.AddClaim(_content);
         }
-
+        [TestMethod]
+        public void AddClaim_ShouldGetCorrectBoolean()
+        {
+            //Arrange 
+            Claim content = new Claim();
+            ClaimsRepository _repo = new ClaimsRepository();
+            //Act
+            bool addResult = _repo.AddClaim(content);
+            // Assert
+            Assert.IsTrue(addResult);
+        }
         [TestMethod]
         public void GetContents_ShouldReturnCorrectCollection()
         {
@@ -43,21 +41,49 @@ namespace _02_ClaimsTest
             ClaimsRepository repo = new ClaimsRepository();
             repo.AddClaim(content);
             //Act
-            List<Claim> contents = repo.GetContents();
-            bool directoryHasContent = contents.Contains(content);
+            Queue<Claim> contents = _repo.GetContents();
+            bool queueHasContent = contents.Contains(content);
             //Assert
-            Assert.IsTrue(directoryHasContent);
+            Assert.IsTrue(queueHasContent);
         }
         [TestMethod]
-        public void GetByClaimID_ShouldReturnCorrectContent()
+        public void AddClaimQueue_ShouldAddIt()
         {
             //Arrange
+            Queue<Claim> localclaimsQueue = _repo.GetContents();
+            //List<Claim> _contentClaims = new List<Claim>();
+            DateTime inDateTime = new DateTime(2020, 07, 01);
+            DateTime claimDateTime = new DateTime(2020, 07, 04);
+            Claim _content1 = new Claim(10, ClaimType.Car, "Hit Bicycler", 30000.00, inDateTime, claimDateTime);
             //ACT
-            Claim searchResult = _repo.GetContentByClaimId(1);
+            int startingCount = localclaimsQueue.Count;
+            _repo.AddClaimQueue(_content1);
+            int count = localclaimsQueue.Count;
+            bool wasAdded = (localclaimsQueue.Count > startingCount) ? true : false;
+            // Assert
+            Assert.IsTrue(wasAdded);
             //Assert!
-            Assert.AreEqual(_content, searchResult);
-        }
 
+        }
+        [TestMethod]
+        public void RemoveClaimQueue_RemoveIt()
+        {
+            Queue<Claim> localclaimsQueue = _repo.GetContents();
+            //List<Claim> _contentClaims = new List<Claim>();
+            DateTime inDateTime = new DateTime(2020, 07, 01);
+            DateTime claimDateTime = new DateTime(2020, 07, 04);
+            Claim _content1 = new Claim(10, ClaimType.Car, "Hit Bicycler", 30000.00, inDateTime, claimDateTime);
+            //ACT
+            int startingCount = localclaimsQueue.Count;
+            _repo.AddClaimQueue(_content1);
+            // must add a claim before removing it
+            _repo.RemoveClaimQueue();
+            int count = localclaimsQueue.Count;
+            bool wasRemoved = (localclaimsQueue.Count == startingCount) ? true : false;
+            // Assert
+            Assert.IsTrue(wasRemoved);
+            //Assert!
+        }
     }
 }
 
